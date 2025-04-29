@@ -1,0 +1,52 @@
+<!-- Base HTML template with placeholders for dynamic content -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pre-Application Review Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f9f9f9; color: #333; }
+    .section { margin-bottom: 20px; }
+    .section-title { font-size: 1.2em; font-weight: bold; margin-bottom: 5px; }
+    .subsection { margin-left: 20px; margin-bottom: 10px; }
+    .subsection-title { font-size: 1em; font-weight: bold; }
+    .ai-section { background: #fff; padding: 10px; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+  <!-- Header section (contains static info and dynamic introduction) -->
+  <div id="header">
+    <h2>Pre-Application Review Summary</h2>
+    <p><strong>Project:</strong> {{project_name}}</p>
+    <p><strong>Type:</strong> {{project_type}}</p>
+    <p><strong>Location:</strong> {{location}}</p>
+    <p><strong>Meeting Date:</strong> {{meeting_date}}</p>
+    <div class="ai-section">
+      {{header_content}}
+    </div>
+    <hr/>
+  </div>
+  <!-- Zoning Section (Dynamic content with subsections) -->
+  <div class="section" id="section-zoning">
+    <div class="section-title">Zoning</div>
+    <div class="ai-section">
+      {{zoning_content}}
+    </div>
+  </div>
+  <!-- Commercial Standards Section (Dynamic content) -->
+  <div class="section" id="section-commercial-standards">
+    <div class="section-title">Commercial Development Standards</div>
+    <div class="ai-section">
+      {{commercial_standards_content}}
+    </div>
+  </div>
+  <!-- General Standards Section (Dynamic with multiple subsections) -->
+  <div class="section" id="section-general-standards">
+    <div class="section-title">General Standards</div>
+    <div class="ai-section">
+      {{general_standards_content}}
+    </div>
+  </div>
+</body>
+</html>

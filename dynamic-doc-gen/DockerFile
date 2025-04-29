@@ -1,0 +1,15 @@
+FROM python:3.10-slim
+WORKDIR /app
+# Install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+# Copy the application code
+COPY app app
+COPY tests tests
+COPY research_report.md .
+COPY README.md .
+COPY setup.py .
+COPY app/templates app/templates
+EXPOSE 8000
+# Set the entrypoint to run the FastAPI server
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
